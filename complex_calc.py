@@ -1,4 +1,8 @@
-def c_sum(x, y):
+x = [0, 0]
+y = [0, 0]
+
+
+def c_sum():
     a = x[0]  # для красоты и понимания
     b = x[1]
     c = y[0]
@@ -8,7 +12,7 @@ def c_sum(x, y):
     return [re, im]
 
 
-def c_minus(x, y):
+def c_minus():
     a = x[0]  # для красоты и понимания
     b = x[1]
     c = y[0]
@@ -18,7 +22,7 @@ def c_minus(x, y):
     return [re, im]
 
 
-def c_mult(x, y):
+def c_mult():
     a = x[0]  # для красоты и понимания
     b = x[1]
     c = y[0]
@@ -28,23 +32,29 @@ def c_mult(x, y):
     return [re, im]
 
 
-def c_div(x, y):
+def c_div():
     a = x[0]  # для красоты и понимания
     b = x[1]
     c = y[0]
     d = y[1]
     re = (a * c + b * d) / (c ** 2 + d ** 2)
-    im = (b * c + a * d) / (c ** 2 + d ** 2)
+    im = (b * c - a * d) / (c ** 2 + d ** 2)
     return [re, im]
 
 
-def calc_complex(a, b, op):
+def init(compnumb1, compnumb2):
+    global x
+    global y
+    x = compnumb1
+    y = compnumb2
+
+
+def do_it(op):
     if op == "+":
-        result = c_sum(a, b)
+        return c_sum()
     elif op == "-":
-        result = c_minus(a, b)
+        return c_minus()
     elif op == "*":
-        result = c_mult(a, b)
+        return c_mult()
     elif op == "/":
-        result = c_div(a, b)
-    return result
+        return c_div()

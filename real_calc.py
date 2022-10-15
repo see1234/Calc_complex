@@ -1,21 +1,36 @@
-def r_div(x, y):
+x = 0
+y = 0
+
+
+def r_div():
     return x / y
 
-def r_mult(x, y):
+
+def r_mult():
     return x * y
 
-def r_minus(x, y):
+
+def r_minus():
     return x - y
 
-def r_sum(x, y):
+
+def r_sum():
     return x + y
 
-def operation(op, x, y): 
+
+def init(number1, number2):
+    global x
+    global y
+    x = number1
+    y = number2
+
+
+def do_it(op):
     if op == "+":
-        return r_sum(x, y)
+        return r_sum()
     elif op == "-":
-        return r_minus(x, y)
+        return r_minus()
     elif op == "*":
-        return r_mult(x, y)
+        return r_mult()
     elif op == "/":
-        return r_div(x, y)
+        return r_div()
