@@ -10,8 +10,8 @@ def button_click():
     value_b = view.get_value()
 
     if 'i' in value_a or 'i' in value_b:
-        value_a_lst = list(map(int, value_a.replace('i', '').split()))
-        value_b_lst = list(map(int, value_b.replace('i', '').split()))
+        value_a_lst = list(map(int, value_a.replace('i', '').split('+')))
+        value_b_lst = list(map(int, value_b.replace('i', '').split('+')))
         cc.init(value_a_lst, value_b_lst)
         result = cc.do_it(value_op)
         log_res = view.view_data_lst(result, "result")

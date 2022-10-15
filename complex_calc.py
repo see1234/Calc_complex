@@ -38,7 +38,7 @@ def c_div():
     c = y[0]
     d = y[1]
     re = (a * c + b * d) / (c ** 2 + d ** 2)
-    im = (b * c + a * d) / (c ** 2 + d ** 2)
+    im = (b * c - a * d) / (c ** 2 + d ** 2)
     return [re, im]
 
 
