@@ -1,5 +1,5 @@
 def view_data(data, title):
-    print(f'{title} = {data}')
+    return (f'{title} = {data}')
 
 
 def view_data_lst(data, title):
